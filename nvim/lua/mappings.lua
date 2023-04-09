@@ -17,6 +17,10 @@ VIM_KEYMAP_SET({"i"}, "<C-right>", "<C-O>w", NOREMAP_SILENT)
 
 
 VIM_KEYMAP_SET({"n"}, "<localleader>p", ":IronRepl<CR>", NOREMAP_SILENT)
+VIM_KEYMAP_SET({"i", "n"}, "<C-\\><C-\\>", "<ESC><C-w><C-w>i", NOREMAP_SILENT)
+VIM_KEYMAP_SET({"t"}, "<ESC>", "<C-\\><C-n>", NOREMAP_SILENT)
+VIM_KEYMAP_SET({"t"}, "<C-\\><C-\\>", "<C-\\><C-n><C-w><C-w>", NOREMAP_SILENT)
+
 -- Return to last edit position when opening files
 vim.cmd([[
 augroup augroup_all_files_vimscript
